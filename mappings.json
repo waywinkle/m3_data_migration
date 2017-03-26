@@ -1,0 +1,137 @@
+{
+  "FAS001": {
+    "wsdl": "http://smlm3be1.synlait.local:46007/mws-ws/M3BE-M3SQL/MPD_FAS001_Create?wsdl",
+    "method": "Create_w_FAS002-3",
+    "data_source": "FAS001",
+    "mapping": {
+      "W1ASID":"Fixed Asset No",
+      "W1SBNO":"Sub Number",
+      "W1FAST":"",
+      "W1FATP":"Fixed Asset Type",
+      "W1DIVI":"",
+      "WWFADS":"Name",
+      "WWTXT1":"Text Line 1",
+      "WWTXT2":"Text Line 2",
+      "WWACAT":"Group",
+      "WWSPYN":"",
+      "WWVONO":"",
+      "WWCUCD":"Currency",
+      "WWARAT":"Exchange Rate",
+      "WWPPER":"Acquisition Date",
+      "WWFAQT":"FA Quantity",
+      "WWAPER":"Activation Date",
+      "WWMPER":"",
+      "WWBPER":"",
+      "WWLRVD":"",
+      "WWLOC1":"Loc 1",
+      "WWLOC2":"Loc 2",
+      "WWLOC3":"Loc 3",
+      "WWREAR":"",
+      "WFGEOX":"",
+      "WFGEOY":"",
+      "WWSRNO":"Serial Number",
+      "WWCCCO":"",
+      "WWPINO":"",
+      "WWINNO":"",
+      "WWSECS":"",
+      "WWSECN":"",
+      "WWLCCO":"",
+      "WWLCNO":"",
+      "WWWADT":"",
+      "WWFRF1":"",
+      "WWFRF2":"",
+      "WWFRF3":"",
+      "WWFRF4":"",
+      "WWFRF5":"",
+      "WWAIT2":"FMAIT2",
+      "WWAIT3":"FMAIT3",
+      "WWAIT4":"FMAIT4",
+      "WWAIT5":"FMAIT5",
+      "WWAIT6":"FMAIT6",
+      "WWAIT7":"FMAIT7",
+      "WWSPER":"Sales Date",
+      "WWPYNO":"Payer",
+      "WWCINO":"Inv No",
+      "WWSCUC":"Currency",
+      "WWSRAT":"Exchng Rate",
+      "WWPCDA":"",
+      "WWPHCN":"",
+      "WWPHSN":"",
+      "WWPHCT":""
+    },
+    "constants": {
+      "W1FAST": "1",
+      "W1DIVI": "100"
+    },
+    "convert": {
+      "WWPPER": "YYYYMMDD_to_DDMMYYYY",
+      "WWAPER": "YYYYMMDD_to_DDMMYYYY"
+    }
+  },
+  "FAS002": {
+    "wsdl": "http://smlm3be1.synlait.local:46007/mws-ws/M3BE-M3SQL/MPD_FAS001_FAS002_Change?wsdl",
+    "method": "Change",
+    "data_source": "FAS002",
+    "mapping": {
+      "W1DIVI":"",
+      "W1ASID":"Fixed Asset No",
+      "W1FAST":"",
+      "W1SBNO":"Sub Number",
+      "FAS002": {
+        "WWDPMD": "Depn Method",
+        "WWBVAT": "Value Type",
+        "WWHYAD": "",
+        "WWNOMT": "Lifetime Months",
+        "WWMDTP": "",
+        "WWNPER": "",
+        "WWDTLC": "",
+        "WWSVAL": "",
+        "WWSTPC": "",
+        "WWDTTB": "",
+        "WEDBPC": "Period Type",
+        "WEBELZ": "",
+        "WGDPTP": "Depn Type"
+      }
+    },
+    "constants": {
+      "W1FAST": "1",
+      "W1DIVI": "100",
+      "WWSTPC": "0"
+    },
+    "convert": {
+      "WWNOMT": "at_least_twelve"
+    }
+  },
+  "FAS003": {
+    "wsdl": "http://smlm3be1.synlait.local:46007/mws-ws/M3BE-M3SQL/MPD_FAS001_FAS003_Change?wsdl",
+    "method": "Change",
+    "data_source": "FAS003",
+    "mapping": {
+      "W1ASID":"Fixed Asset No",
+      "W1SBNO":"Sub Number",
+      "W1DIVI":"",
+      "W1FAST":"",
+      "FAS003": {
+        "WWAIT1":"FMAIT1",
+        "WWAIT2":"FMAIT2",
+        "WWAIT3":"FMAIT3",
+        "WWAIT4":"FMAIT4",
+        "WWAIT5":"FMAIT5",
+        "WWAIT6":"FMAIT6",
+        "WWAIT7":"FMAIT7",
+        "WWFAVC":"FA Value Curr",
+        "WWVONO":"",
+        "WWVPER":"Value Period",
+        "WWVDSC":"",
+        "WGVATP":"Value Type"
+      }
+
+    },
+    "constants": {
+      "W1FAST": "1",
+      "W1DIVI": "100"
+    },
+    "convert": {
+    }
+  }
+}
