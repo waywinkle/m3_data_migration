@@ -44,7 +44,7 @@ def call_web_service(wsdl, method, ws_data, retry=0):
         ws_method(ws_data)
     except WebFault as e:
         logger.error(e)
-        logger.error('wsdl=' + wsdl + ', method=' + method)
+        logger.error('wsdl={wsdl}, method={method}, data={ws_data}'.format(wsdl=wsdl, method=method, ws_data=ws_data))
     except:
         if retry < 5:
             sleep(30)
@@ -52,6 +52,8 @@ def call_web_service(wsdl, method, ws_data, retry=0):
             call_web_service(wsdl, method, wsdl, retry=retry)
         else:
             logger.error('failed with 5 retries')
+            logger.error(
+                'wsdl={wsdl}, method={method}, data={ws_data}'.format(wsdl=wsdl, method=method, ws_data=ws_data))
 
 
 if __name__ == "__main__":

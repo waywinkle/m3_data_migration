@@ -40,12 +40,12 @@ def process_one(mapping, query_filter):
         if map_ == mapping:
             logger.debug(values)
             records = get_records(values['data_source'], query_filter=query_filter)
-    for rec in records:
-                process_record = Mapper(rec, **values)
-                logger.info(process_record.processed_data)
-                call_web_service(values['wsdl'], values['method'], process_record.processed_data)
+            for rec in records:
+                        process_record = Mapper(rec, **values)
+                        logger.info(process_record.processed_data)
+                        call_web_service(values['wsdl'], values['method'], process_record.processed_data)
 
 
 if __name__ == '__main__':
-    # process_one('FAS003', "[Fixed Asset No] = '0000200925'")
-    main()
+    process_one('FAS003', "[Fixed Asset No] = '0000200649'")
+    # main()
