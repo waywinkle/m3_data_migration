@@ -35,7 +35,7 @@ class Mapper(object):
                 processed[key] = self.process(value)
             elif key in self.constants:
                 processed[key] = self.constants[key]
-            elif key in self.conversions:
+            elif key in self.conversions and self.data.get(value, None) is not None:
                 conversion_function = getattr(conversions, self.conversions[key])
                 processed[key] = conversion_function(self.data[value])
             elif value != '' and self.data.get(value, None) is not None:

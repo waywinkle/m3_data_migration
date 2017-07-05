@@ -1,6 +1,6 @@
 {
   "FAS001": {
-    "wsdl": "http://smlm3be1.synlait.local:46007/mws-ws/M3BE-M3SQL/MPD_FAS001_Create?wsdl",
+    "wsdl": "http://smlm3be1.synlait.local:25007/mws-ws/M3BE-M3SQL/MPD_FAS001_Create?wsdl",
     "method": "Create_w_FAS002-3",
     "data_source": "FAS001",
     "mapping": {
@@ -65,11 +65,12 @@
     },
     "convert": {
       "WWPPER": "YYYYMMDD_to_DDMMYYYY",
-      "WWAPER": "YYYYMMDD_to_DDMMYYYY"
+      "WWAPER": "YYYYMMDD_to_DDMMYYYY",
+      "WWSPER": "YYYYMMDD_to_DDMMYYYY"
     }
   },
   "FAS002": {
-    "wsdl": "http://smlm3be1.synlait.local:46007/mws-ws/M3BE-M3SQL/MPD_FAS001_FAS002_Change?wsdl",
+    "wsdl": "http://smlm3be1.synlait.local:25007/mws-ws/M3BE-M3SQL/MPD_FAS001_FAS002_Change?wsdl",
     "method": "Change",
     "data_source": "FAS002",
     "mapping": {
@@ -102,7 +103,7 @@
     }
   },
   "FAS003": {
-    "wsdl": "http://smlm3be1.synlait.local:46007/mws-ws/M3BE-M3SQL/MPD_FAS001_FAS003_Change?wsdl",
+    "wsdl": "http://smlm3be1.synlait.local:25007/mws-ws/M3BE-M3SQL/MPD_FAS001_FAS003_Change?wsdl",
     "method": "Change",
     "data_source": "FAS003",
     "mapping": {

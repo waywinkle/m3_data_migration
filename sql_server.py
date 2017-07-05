@@ -35,6 +35,6 @@ def get_records(table, sort_column=None, query_filter=None):
 
 
 if __name__ == "__main__":
-    result = get_records('FAS003', sort_column='Fixed Asset No', query_filter="[Fixed Asset No] = '0000200925'")
+    result = get_records('FAS001', sort_column='Fixed Asset No', query_filter="[Fixed Asset No] = '0000200925'")
     for rec in result:
         print(rec)
