@@ -133,5 +133,18 @@
     },
     "convert": {
     }
+  },
+  "PCS260": {
+    "wsdl": {},
+    "data_source": "PCS260",
+    "mapping": {
+
+    },
+    "constants": {
+
+    },
+    "convert": {
+
+    }
   }
 }
